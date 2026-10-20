@@ -4,7 +4,7 @@ const suffixes = { "", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "
 return function(number: number, decimals: number?): string
 	local abs = math.abs(number)
 	if abs < 1000 then
-		return string.format("%." .. (decimals or 0) .. "f", number):gsub("%.?0+$", "")
+		return string.format("%." .. (decimals or 0) .. "f", number)
 	end
 
 	local tier = math.floor(math.log10(abs) / 3)
